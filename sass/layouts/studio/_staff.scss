@@ -65,20 +65,16 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function-hover);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
 }
-
 .staff-soc-icon {
     transition: fill 250ms var(--timing-function-hover);
     fill: currentColor;
-
-}
-
-.staff-soc-link:hover,
-.staff-soc-link:focus {
-    background-color: var(--accent-color);
-}
-
-.staff-soc-link:hover .staff-soc-icon,
-.staff-soc-link:focus .staff-soc-icon {
-    fill: var(--button-text-color);
+    .staff-soc-link:hover &,
+    .staff-soc-link:focus & {
+        fill: var(--button-text-color);
+    }
 }

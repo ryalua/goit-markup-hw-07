@@ -8,14 +8,11 @@
     letter-spacing: 0.03em;
     color: #757575;
 }
-
 .check-input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
 }
-
 .check-box {
     display: inline-flex;
     align-items: center;
@@ -27,50 +24,35 @@
 
     border: 2px solid var(--title-text-color);
     border-radius: 2px;
+    .check-input:checked+& {
+        background-color: var(--accent-color);
+        border: 1px solid var(--accent-color);
+    }
+    .check-input:focus+& {
+        border-color: var(--accent-color);
+    }
 }
-
-.check-input:focus+.check-box {
-    border-color: var(--accent-color);
-}
-
 .check-icon {
     display: block;
     align-items: center;
     justify-content: center;
     opacity: 0;
-
-    /* border: 2px solid #212121; */
-    /* border-radius: 2px; */
+    .check-input:checked+.check-box & {
+        opacity: 1;
+    }
 }
-
-.check-input:checked+.check-box {
-    background-color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-
-}
-
-.check-input:checked+.check-box .check-icon {
-    opacity: 1;
-    /* fill: var(--primery-text-color); */
-}
-
 .check-pact {
     color: #2196F3;
     text-decoration: underline;
 }
-
-
-.buttom-send {
+.button-send {
     display: flex;
     justify-content: center;
 
     border: 0;
     border-radius: 4px;
     padding: 10px 52px;
-    /* margin-right: 164px; */
-    /* margin-bottom: 40px; */
     margin-left: 125px;
-
 
     background-color: var(--accent-color);
     color: var(--button-text-color);
@@ -78,8 +60,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    /* align-items: center; */
-    /* text-align: center; */
     letter-spacing: 0.06em;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -87,9 +67,10 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function-hover);
+    &:hover,
+    &:focus {
+        background-color: var(--button-hero-hover);
+    }
 }
 
-.buttom-send:hover,
-.buttom-send:focus {
-    background-color: var(--button-hero-hover);
-}
+

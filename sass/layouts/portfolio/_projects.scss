@@ -12,23 +12,21 @@
 
 .project-item {
     flex-basis: calc((100% - 60px)/3);
-    /* position: relative; */
 }
 
 .project-link {
     display: block;
-    /* position: relative; */
 
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function-hover);
-
+    &:hover,
+    &:focus {
+        box-shadow: var(--shadow-cards-button);
+    }
 }
 
-.project-link:hover,
-.project-link:focus {
-    box-shadow: var(--shadow-cards-button);
-}
+
 
 
 .project-overlay {
@@ -45,9 +43,7 @@
     top: 0;
     left: 0;
     margin: auto;
-    /* padding-top: 63px; */
     padding-right: 24px;
-    /* padding-bottom: 63px; */
     padding-left: 24px;
 
     width: 100%;
@@ -63,15 +59,12 @@
 
     transition: transform 250ms var(--timing-function-hover),
         opacity 250ms var(--timing-function-hover);
+    .project-link:hover &,
+    .project-link:focus & {
+        opacity: 1;
+        transform: translateY(0);
+        }
 }
-
-.project-link:hover .project-text,
-.project-link:focus .project-text {
-    opacity: 1;
-    transform: translateY(0);
-
-}
-
 
 .section-title {
     color: var(--title-text-color);

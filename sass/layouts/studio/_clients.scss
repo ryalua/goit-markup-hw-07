@@ -23,26 +23,13 @@
     transition-property: border, color;
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function-hover);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+        }
 }
 
 .client-icon {
     fill: currentColor;
 }
-
-.client-link:hover,
-.client-link:focus {
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-}
-
-
-/* .client-link:hover {
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-}
-
-.client-link:focus {
-    border: none;
-    outline: 1px solid var(--accent-color);
-    color: var(--accent-color);
-} */

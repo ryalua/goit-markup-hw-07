@@ -4,14 +4,12 @@
 
     background-color: var(--hero-footer-bcg);
 }
-
-.footer-box {
+.footer {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
-
-.logo-footer {
+.footer__aside-logo {
     display: inline-block;
     margin-bottom: 20px;
 
@@ -21,23 +19,23 @@
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
+    .footer__logo-web {
+        color: var(--accent-color);
+    }
 }
-
-.addr-footer .text {
+.footer__aside-text {
     margin-bottom: 9px;
-    /* margin-right: 70px; */
 
     color: var(--button-text-color);
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
 }
-
-.com-footer:not(:last-child) {
+.footer__aside-com:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.com-footer .link-footer {
+.footer__aside-link {
     padding-top: 0;
     padding-bottom: 0;
 
@@ -50,19 +48,20 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function-hover);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.com-footer .link-footer:hover,
-.com-footer .link-footer:focus {
-    color: var(--accent-color);
-}
+
 
 /* ------ Soc net --------*/
-.soc-footer {
+.footer__soc-footer {
     margin-left: 70px;
 }
 
-.footer-title {
+.footer__soc-title {
     margin-bottom: 20px;
     color: var(--button-text-color);
     text-transform: uppercase;
@@ -74,18 +73,18 @@
 
 }
 
-.footer-soc-list {
+.footer__soc-list {
     display: flex;
     justify-content: left;
     gap: 10px;
 }
 
-.footer-soc-item {
+.footer__soc-item {
     width: 44px;
     height: 44px;
 }
 
-.footer-soc-link {
+.footer__soc-link {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -99,16 +98,17 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function-hover);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
 }
 
-.footer-soc-icon {
+.footer__soc-icon {
     fill: currentColor;
 }
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-    background-color: var(--accent-color);
-}
+
 
 /* .footer-soc-link:hover .staff-soc-icon,
 .footer-soc-link:focus .staff-soc-icon {
@@ -117,19 +117,11 @@
 
 
 /*-------- Form Subscribe ------------*/
-.form-footer {
-    display: flex;
-    align-items: flex-end;
-
-    margin-left: auto;
-}
-
-.form-fild {
+.footer__form-footer {
     position: relative;
     margin-left: auto;
 }
-
-.form-label {
+.footer__form-label {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -138,10 +130,14 @@
 
     color: var(--button-text-color);
 }
+.footer__form-fild {
+    display: flex;
+    align-items: flex-end;
 
-.form-input {
+    margin-left: auto;
+}
+.footer__form-input {
     width: 358px;
-    /* width: 100%; */
     height: 50px;
 
     margin-top: 20px;
@@ -152,13 +148,11 @@
     border-radius: 4px;
     background-color: transparent;
     color: #FFFFFF;
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
 }
-
-.form-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.form-btn {
+.footer__form-btn {
     display: flex;
     align-items: center;
 
@@ -187,14 +181,12 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function-hover);
+    &:hover,
+    &:focus {
+        background-color: var(--button-hero-hover);
+    }
 }
-
-.form-btn:hover,
-.form-btn:focus {
-    background-color: var(--button-hero-hover);
-}
-
-.form-icon {
+.footer__form-icon {
     margin-left: 10px;
 }
 
